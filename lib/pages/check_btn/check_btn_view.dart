@@ -11,7 +11,7 @@ class CheckBtnView extends GetView<CheckBtnLogic> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('No Network'),
+        title: const Text('Network connection failed'),
         backgroundColor: Colors.white,
       ),
       body: SizedBox(
@@ -22,19 +22,10 @@ class CheckBtnView extends GetView<CheckBtnLogic> {
           physics: const AlwaysScrollableScrollPhysics(),
           child: <Widget>[
             const SizedBox(
-              height: 30,
-            ),
-            Image.asset(
-              'assets/noNetwork.webp',
-              width: 88,
-              height: 85,
-              fit: BoxFit.cover,
-            ),
-            const SizedBox(
-              height: 20,
+              height: 100,
             ),
             const Text(
-              'Your cellular network is abnorma try again later',
+              'Please check your network and try again',
               style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w500),
             ),
             const SizedBox(

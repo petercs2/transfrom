@@ -2,7 +2,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
-class NoNetworkLogic extends GetxController {
+class CheckBtnLogic extends GetxController {
 
   void checkNetwork() async {
     var connectivityResult = await (Connectivity().checkConnectivity());

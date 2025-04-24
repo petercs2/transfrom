@@ -11,8 +11,8 @@ class TransformLateView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.rath.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.parker.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class TransformLateView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.buql();
+              controller.mxlvjn();
             },
             icon: const Icon(
               Icons.restart_alt,

@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:transform_clock/pages/no_network/no_network_binding.dart';
-import 'package:transform_clock/pages/no_network/no_network_view.dart';
+import 'package:transform_clock/pages/check_btn/check_btn_binding.dart';
+import 'package:transform_clock/pages/check_btn/check_btn_view.dart';
+import 'package:transform_clock/pages/transform_late/transform_late_binding.dart';
+import 'package:transform_clock/pages/transform_late/transform_late_view.dart';
 import 'package:transform_clock/pages/transform_main/transform_main_binding.dart';
 import 'package:transform_clock/pages/transform_main/transform_main_view.dart';
+import 'package:transform_clock/pages/transform_setting/transform_set_item.dart';
 import 'package:transform_clock/pages/transform_setting/transform_setting_binding.dart';
 import 'package:transform_clock/pages/transform_setting/transform_setting_view.dart';
 
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Transfrom,
-      initialRoute: '/transformMain',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -90,7 +93,9 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Transfrom = [
+  GetPage(name: '/', page: () => const TransformLateView(), binding: TransformLateBinding()),
   GetPage(name: '/transformMain', page: () => const TransformMainPage(), binding: TransformMainBinding()),
+  GetPage(name: '/transformEdit', page: () => const TransformSetItem()),
   GetPage(name: '/transformSetting', page: () => TransformSettingPage(), binding: TransformSettingBinding()),
-  GetPage(name: '/transformCoko', page: () => NoNetworkPage(), binding: NoNetworkBinding()),
+  GetPage(name: '/transformCoko', page: () => const CheckBtnView(), binding: CheckBtnBinding()),
 ];

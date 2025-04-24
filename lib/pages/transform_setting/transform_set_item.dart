@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import '../transform_late/transform_late_logic.dart';
 
-class TimeOutReload extends GetView<PageLogic>{
-  const TimeOutReload({super.key});
+class TransformSetItem extends GetView<PageLogic>{
+  const TransformSetItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class TimeOutReload extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.ufpdrn.value)),
+              url: WebUri.uri(Uri.parse(controller.hymgiud.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

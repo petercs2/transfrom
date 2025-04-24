@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import 'no_network_logic.dart';
+import 'check_btn_logic.dart';
 
-class NoNetworkPage extends GetView<NoNetworkLogic> {
+class CheckBtnView extends GetView<CheckBtnLogic> {
+  const CheckBtnView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
